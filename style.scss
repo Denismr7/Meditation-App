@@ -1,3 +1,89 @@
-body {
-    background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+// Color theme and styles
+$color1: #eb6383;
+$color2: #fa9191;
+$color3: #ffe9c5;
+$color4: #b4f2e1;
+@mixin styleButton {
+        width: 30%;
+        height: 10%;
+        background: none;
+        border: 2px solid $color1;
+        transition: all 0.5s ease;
+        font-family: 'Heebo', sans-serif;
+        font-size: 15px;
+        color: $color1;
+        font-weight: 500;
+        cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.time-select, .audio-control, .sound-picker {
+    height: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.audio-control {
+    position: relative;
+    background-color: $color1;
+    & svg {
+        position: absolute;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        pointer-events: none;
+    }
+    & .time-countdown {
+        position: absolute;
+        bottom: 10%;
+        color: $color3;
+        font-size: 40px;
+    }
+}
+.time-select {
+    background-color: $color4;
+    & .time-button {
+       @include styleButton();
+       &:hover {
+        background: $color2;
+
+        color: whitesmoke;
+    }
+    }
+}
+.sound-picker {
+    background-color: $color3;
+    & button {
+        @include styleButton();
+        border: none;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        padding: 20px;
+        &:nth-child(1) {
+            background-color: $color4;
+        }
+        &:nth-child(2) {
+            background-color: $color2;
+        }
+        & img {
+            height: 100%;
+        }
+    }
 }
