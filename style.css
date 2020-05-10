@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Heebo', sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.time-select, .audio-control, .sound-picker {
+  height: 80%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.audio-control {
+  position: relative;
+  background-color: #eb6383;
+}
+
+.audio-control svg {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.audio-control .time-countdown {
+  position: absolute;
+  bottom: 10%;
+  color: #ffe9c5;
+  font-size: 40px;
+}
+
+.time-select {
+  background-color: #b4f2e1;
+}
+
+.time-select .time-button {
+  width: 30%;
+  height: 10%;
+  background: none;
+  border: 2px solid #eb6383;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: 'Heebo', sans-serif;
+  font-size: 15px;
+  color: #eb6383;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.time-select .time-button:hover {
+  background: #fa9191;
+  color: whitesmoke;
+}
+
+.sound-picker {
+  background-color: #ffe9c5;
+}
+
+.sound-picker button {
+  width: 30%;
+  height: 10%;
+  background: none;
+  border: 2px solid #eb6383;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: 'Heebo', sans-serif;
+  font-size: 15px;
+  color: #eb6383;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.sound-picker button:nth-child(1) {
+  background-color: #b4f2e1;
+}
+
+.sound-picker button:nth-child(2) {
+  background-color: #fa9191;
+}
+
+.sound-picker button img {
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */
